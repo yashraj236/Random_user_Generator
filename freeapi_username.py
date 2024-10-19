@@ -8,7 +8,9 @@ def fetch_random_user_freeapi():
     if data["success"] and "data" in data:
         user_data = data["data"]
         username = user_data["login"]["username"]
+        lastname = last_data["login"]["lastname"]
         country = user_data["location"]["country"]
+        
         return username,country
     else:
         raise Exception("Failed to fetch user data")
